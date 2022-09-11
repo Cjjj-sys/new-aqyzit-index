@@ -1,0 +1,76 @@
+.outerBorder {
+    background-image: linear-gradient(to right, #a8edea 0%, #fed6e3 100%);
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+
+mat-card {
+    box-shadow: 0 0 28px rgba(0,0,0,.07);
+}
+
+.title {
+    line-height: 1em;
+    font-size: 5em;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-weight: 1000;
+    margin-bottom: 1em;
+    position: relative;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    transition: all 1s ease-in-out;
+
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; /*设置不透明度*/
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+
+.subtitle {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 400;
+    flex-wrap: nowrap;
+    animation: 
+    	widths 2s,
+        letter-spacing 2s,
+        fadeInAnimation 4s;
+    animation-fill-mode: forwards;
+}
+
+.logo {
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    animation: rotate 6s linear infinite;
+}
+
+/* 容器宽的改变动画 */
+@keyframes widths {
+    from {width: 0;}
+    to {width: 102%;} 
+}
+
+@keyframes letter-spacing {
+    from {letter-spacing: 0;}
+    to {letter-spacing: 1em;} 
+}
+
+
+@keyframes rotate{
+	0%{
+		transform: rotateZ(0deg);/*从0度开始*/
+	}
+	100%{
+		transform: rotateZ(360deg);/*360度结束*/
+	}
+}
